@@ -1,12 +1,12 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router';
-import configureStore from 'store/configureStore';
+//import configureStore from 'store/configureStore';
 
-import App from 'containers/App';
-import Intro from 'containers/Intro';
-import Questions from 'containers/Questions';
-import Question from 'containers/Question';
+import App from '../components';
+import Intro from '../components/containers/Intro';
+import Questions from '../components/containers/Questions';
+import Question from '../components/containers/Question';
 
 export default function(history) {
   return (
@@ -19,3 +19,4 @@ export default function(history) {
     </Router>
   );
 };
+ 

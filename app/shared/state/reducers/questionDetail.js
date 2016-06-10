@@ -1,4 +1,4 @@
-import * as ActionType from 'actions/questions'
+import * as ActionType from '../actions/questions'
 import _ from 'lodash'
 import Immutable from 'immutable'
 
@@ -13,6 +13,9 @@ export default function(state = defaultState, action) {
 
     case ActionType.LOADED_QUESTION_USER:
       return state.merge({ user: action.response })
+
+    case ActionType.LOADED_FAKE_STUFF:
+      return state.merge({ stuff: action.response })
 
     default:
       return state

@@ -11,7 +11,7 @@ var env = {
 var config = {
   devtool: DEBUG ? 'cheap-module-eval-source-map' : false,
   entry: {
-    app: './app/app',
+    app: './app/client',
     vendor: [
       'react',
       'react-router',

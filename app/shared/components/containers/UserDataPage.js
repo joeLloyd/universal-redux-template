@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchUserData, fetchUserData2 } from '../actions';
+import { fetchUserData, fetchUserData2 } from '../../state/actions';
 
 class UserDataPage extends Component {
   static fetchData({ query, params, store }) {

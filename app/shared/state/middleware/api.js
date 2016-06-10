@@ -1,7 +1,7 @@
 import superAgent from 'superagent'
 import Promise, { using } from 'bluebird'
 import _ from 'lodash'
-import config from 'config'
+import config from '../config'
 import { camelizeKeys } from 'humps'
 
 export const CALL_API = Symbol('CALL_API')
@@ -88,9 +88,11 @@ function createRequestPromise (apiActionCreator, next, getState, dispatch) {
 }
 
 function extractParams (callApi) {
+
   let {
     method,
     path,
+    host,
     query,
     body,
     successType,
@@ -99,7 +101,7 @@ function extractParams (callApi) {
     afterError
   } = callApi
 
-  let url = `${config.API_BASE_URL}${path}`
+  let url = host ? `${host}${path}` : `${config.API_BASE_URL}${path}`
 
   return {
     method,

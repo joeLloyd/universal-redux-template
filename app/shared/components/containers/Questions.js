@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { loadQuestions } from 'actions/questions'
+import { loadQuestions } from '../../state/actions/questions'
 import { Link } from 'react-router'
 import _ from 'lodash'
-import Questions from 'components/Questions'
+import Questions from '../components/Questions'
 
 class QuestionContainer extends Component {
   static fetchData({ store }) {
